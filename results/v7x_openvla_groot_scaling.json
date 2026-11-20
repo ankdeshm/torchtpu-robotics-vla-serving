@@ -1,0 +1,64 @@
+{
+  "openvla_7b_compiled_7dof_v7x": [
+    {
+      "model": "openvla/openvla-7b",
+      "mode": "eager_generate_7dof",
+      "hardware": "1x TPU v7x core (bf16)",
+      "batch_size": 1,
+      "p50_ms": 228.86,
+      "p95_ms": 231.59,
+      "control_hz_p50": 4.37
+    },
+    {
+      "model": "openvla/openvla-7b",
+      "mode": "tpu_compile_full_7dof_static_kv",
+      "hardware": "1x TPU v7x core (bf16)",
+      "batch_size": 1,
+      "p50_ms": 50.24,
+      "p95_ms": 50.55,
+      "p99_ms": 50.58,
+      "control_hz_p50": 19.9,
+      "total_robot_actions_per_sec": 19.9,
+      "speedup_vs_eager_generate": 4.56
+    },
+    {
+      "model": "openvla/openvla-7b",
+      "mode": "tpu_compile_full_7dof_static_kv",
+      "hardware": "1x TPU v7x core (bf16)",
+      "batch_size": 2,
+      "p50_ms": 59.98,
+      "p95_ms": 60.27,
+      "p99_ms": 60.41,
+      "control_hz_p50": 16.67,
+      "total_robot_actions_per_sec": 33.34
+    },
+    {
+      "model": "openvla/openvla-7b",
+      "mode": "tpu_compile_full_7dof_static_kv",
+      "hardware": "1x TPU v7x core (bf16)",
+      "batch_size": 4,
+      "p50_ms": 99.6,
+      "p95_ms": 99.94,
+      "p99_ms": 99.99,
+      "control_hz_p50": 10.04,
+      "total_robot_actions_per_sec": 40.16
+    }
+  ],
+  "groot_n1d7_3b_compiled_sweep_v7x": [
+    {"n_cameras": 1, "vlm_seq_len": 320, "batch_size": 1, "denoise_steps": 2, "p50_ms": 3.62, "p95_ms": 3.71, "control_hz_p50": 276.24, "chunks_per_sec": 276.24, "actions_per_sec": 11049.7, "meets_50hz_sla": true, "finite": true},
+    {"n_cameras": 1, "vlm_seq_len": 320, "batch_size": 1, "denoise_steps": 4, "p50_ms": 6.33, "p95_ms": 6.38, "control_hz_p50": 157.98, "chunks_per_sec": 157.98, "actions_per_sec": 6319.1, "meets_50hz_sla": true, "finite": true},
+    {"n_cameras": 1, "vlm_seq_len": 320, "batch_size": 1, "denoise_steps": 8, "p50_ms": 12.28, "p95_ms": 12.62, "control_hz_p50": 81.43, "chunks_per_sec": 81.43, "actions_per_sec": 3257.3, "meets_50hz_sla": true, "finite": true},
+    {"n_cameras": 1, "vlm_seq_len": 320, "batch_size": 1, "denoise_steps": 16, "p50_ms": 22.97, "p95_ms": 23.47, "control_hz_p50": 43.54, "chunks_per_sec": 43.54, "actions_per_sec": 1741.4, "meets_20hz_sla": true, "finite": true},
+    {"n_cameras": 1, "vlm_seq_len": 320, "batch_size": 2, "denoise_steps": 4, "p50_ms": 8.27, "p95_ms": 8.35, "control_hz_p50": 120.92, "chunks_per_sec": 241.84, "actions_per_sec": 9673.5, "meets_50hz_sla": true, "finite": true},
+    {"n_cameras": 1, "vlm_seq_len": 320, "batch_size": 4, "denoise_steps": 4, "p50_ms": 16.67, "p95_ms": 17.18, "control_hz_p50": 59.99, "chunks_per_sec": 239.95, "actions_per_sec": 9598.1, "meets_50hz_sla": true, "finite": true},
+    {"n_cameras": 1, "vlm_seq_len": 320, "batch_size": 8, "denoise_steps": 4, "p50_ms": 32.78, "p95_ms": 33.12, "control_hz_p50": 30.51, "chunks_per_sec": 244.05, "actions_per_sec": 9762.1, "meets_20hz_sla": true, "finite": true},
+    {"n_cameras": 1, "vlm_seq_len": 320, "batch_size": 16, "denoise_steps": 4, "p50_ms": 64.5, "p95_ms": 64.76, "control_hz_p50": 15.5, "chunks_per_sec": 248.06, "actions_per_sec": 9922.5, "meets_20hz_sla": false, "finite": true},
+    {"n_cameras": 2, "vlm_seq_len": 576, "batch_size": 1, "denoise_steps": 4, "p50_ms": 6.41, "p95_ms": 6.46, "control_hz_p50": 156.01, "chunks_per_sec": 156.01, "actions_per_sec": 6240.2, "meets_50hz_sla": true, "finite": true},
+    {"n_cameras": 2, "vlm_seq_len": 576, "batch_size": 2, "denoise_steps": 4, "p50_ms": 10.37, "p95_ms": 10.92, "control_hz_p50": 96.43, "chunks_per_sec": 192.86, "actions_per_sec": 7714.6, "meets_50hz_sla": true, "finite": true},
+    {"n_cameras": 2, "vlm_seq_len": 576, "batch_size": 4, "denoise_steps": 4, "p50_ms": 18.65, "p95_ms": 19.06, "control_hz_p50": 53.62, "chunks_per_sec": 214.48, "actions_per_sec": 8579.1, "meets_50hz_sla": true, "finite": true},
+    {"n_cameras": 2, "vlm_seq_len": 576, "batch_size": 8, "denoise_steps": 4, "p50_ms": 35.98, "p95_ms": 36.23, "control_hz_p50": 27.79, "chunks_per_sec": 222.35, "actions_per_sec": 8893.8, "meets_20hz_sla": true, "finite": true},
+    {"n_cameras": 4, "vlm_seq_len": 1088, "batch_size": 1, "denoise_steps": 4, "p50_ms": 8.15, "p95_ms": 8.22, "control_hz_p50": 122.7, "chunks_per_sec": 122.7, "actions_per_sec": 4908.0, "meets_50hz_sla": true, "finite": true},
+    {"n_cameras": 4, "vlm_seq_len": 1088, "batch_size": 2, "denoise_steps": 4, "p50_ms": 13.34, "p95_ms": 13.75, "control_hz_p50": 74.96, "chunks_per_sec": 149.93, "actions_per_sec": 5997.0, "meets_50hz_sla": true, "finite": true},
+    {"n_cameras": 4, "vlm_seq_len": 1088, "batch_size": 4, "denoise_steps": 4, "p50_ms": 21.93, "p95_ms": 22.49, "control_hz_p50": 45.6, "chunks_per_sec": 182.4, "actions_per_sec": 7295.9, "meets_20hz_sla": true, "finite": true}
+  ]
+}
